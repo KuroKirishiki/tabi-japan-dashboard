@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta
+      name="description"
+      content="Tabi — ваш персональный дашборд путешествия по Японии: маршрут, погода, бюджет и подготовка."
+    />
+    <title>Tabi · Япония ближе</title>
+    <link rel="stylesheet" href="styles/main.css" />
+    <link rel="stylesheet" href="styles/components.css" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 60 60'%3E%3Ccircle cx='30' cy='30' r='24' fill='%23bd4b3f'/%3E%3C/svg%3E"
+    />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <a class="brand" href="#dashboard"
+        ><span class="brandmark">旅</span>tabi<span class="branddot">.</span></a
+      >
+      <p class="brand-sub">ЯПОНИЯ БЛИЖЕ</p>
+      <div class="nav-label">ВАШЕ ПУТЕШЕСТВИЕ</div>
+      <nav aria-label="Главная навигация">
+        <a href="#dashboard" class="active">◫ <span>Дашборд</span></a
+        ><a href="#route">⌁ <span>Маршрут</span></a
+        ><a href="#budget">◉ <span>Бюджет</span></a
+        ><a href="#places">♧ <span>Места и впечатления</span></a
+        ><a href="#todo">☑ <span>Подготовка</span></a>
+      </nav>
+      <div class="side-card">
+        <span>日本</span>
+        <h3>Маленькие открытия.<br />Большое путешествие.</h3>
+        <p>Ваш план, в вашем ритме.</p>
+      </div>
+      <div class="profile">
+        <span class="avatar">旅</span>
+        <div>
+          <strong>Моё путешествие</strong><small>Личный планировщик</small>
+        </div>
+      </div>
+    </aside>
+    <main>
+      <header class="topbar">
+        <span
+          >Моё пространство <span class="slash">/</span>
+          <strong id="breadcrumb">Дашборд</strong></span
+        ><span class="local-badge"><i></i> Сохраняется на устройстве</span>
+      </header>
+      <section class="intro">
+        <div>
+          <p class="eyebrow">KONNICHIWA · こんにちは</p>
+          <h1 id="page-title">Ваша Япония начинается здесь<span>.</span></h1>
+          <p id="page-subtitle">
+            Соберите путешествие, которое захочется вспоминать.
+          </p>
+        </div>
+        <button class="primary" id="add-widget">＋ Добавить виджет</button>
+      </section>
+      <section class="hero" aria-label="План поездки">
+        <div class="hero-content">
+          <span class="pill">МОЯ СЛЕДУЮЩАЯ ГЛАВА</span>
+          <h2>Навстречу<br />Японии.</h2>
+          <p>От огней Токио до тихих садов Киото.</p>
+          <div class="hero-meta">
+            <span>◷ 14 дней</span><span>⌁ 3 города</span
+            ><span>✿ Ваше время для открытий</span>
+          </div>
+          <a href="#route" class="hero-link"
+            >Посмотреть маршрут <span>↗</span></a
+          >
+        </div>
+        <div class="hero-japan" aria-hidden="true">日本</div>
+        <span class="hero-caption">FUJI, JAPAN — 35.3606° N, 138.7274° E</span>
+      </section>
+      <section class="stats" aria-label="Обзор поездки">
+        <div>
+          <span class="stat-icon">⌁</span>
+          <p>Маршрут<strong>Токио → Киото → Осака</strong></p>
+          <small>14 дней открытий</small>
+        </div>
+        <div>
+          <span class="stat-icon">¥</span>
+          <p>Плановый бюджет<strong>¥ 240 000</strong></p>
+          <small>Пример на одного человека</small>
+        </div>
+        <div>
+          <span class="stat-icon">☑</span>
+          <p>Подготовка<strong id="task-stat">0 задач выполнено</strong></p>
+          <small>Шаг за шагом к поездке</small>
+        </div>
+      </section>
+      <div class="section-heading">
+        <div>
+          <h2 id="section-title">Всё для вашего путешествия</h2>
+          <p>Личные планы и актуальные данные — в одном месте.</p>
+        </div>
+        <span id="widget-count"></span>
+      </div>
+      <div id="dashboard" class="grid"></div>
+      <div id="empty-dashboard" hidden>
+        <p>Здесь начинается ваш план. Добавьте первый виджет.</p>
+        <button class="primary" id="empty-add">＋ Добавить виджет</button>
+      </div>
+      <footer>
+        <a href="#dashboard">tabi.</a
+        ><span>旅 — путешествие начинается с одного шага.</span
+        ><small>Учебный проект · Планы и бюджет — пример</small>
+      </footer>
+    </main>
+    <dialog id="widget-dialog">
+      <form method="dialog">
+        <button class="dialog-close" aria-label="Закрыть">×</button>
+      </form>
+      <p class="eyebrow">ВАША ПАНЕЛЬ</p>
+      <h2>Добавьте немного полезного</h2>
+      <p>Каждый виджет можно свернуть, переместить или удалить.</p>
+      <div id="widget-options"></div>
+    </dialog>
+    <div id="announcement" class="sr-only" aria-live="polite"></div>
+    <script type="module" src="main.js"></script>
+  </body>
+</html>
