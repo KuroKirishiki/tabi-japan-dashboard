@@ -1,6 +1,6 @@
 import { Dashboard, widgetTypes } from "./js/Dashboard.js";
 import { el } from "./js/UIComponent.js";
-import { Sakura } from "./js/Sakura.js";
+import { Sakura } from "./js/Sakura.js?v=sakura-layer-2";
 const sakura = new Sakura();
 const dashboard = new Dashboard(document.getElementById("dashboard"));
 const dialog = document.getElementById("widget-dialog");
