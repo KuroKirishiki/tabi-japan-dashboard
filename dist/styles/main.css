@@ -1,10 +1,21 @@
 @import url("https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap");
 .sakura-layer {
-  position: fixed;
+  position: absolute;
   inset: 0;
-  z-index: 10;
+  z-index: 0;
   pointer-events: none;
   overflow: hidden;
+}
+main {
+  position: relative;
+  isolation: isolate;
+}
+main > :not(.sakura-layer) {
+  position: relative;
+  z-index: 1;
+}
+.sidebar {
+  z-index: 2;
 }
 .sakura-petal {
   position: absolute;
