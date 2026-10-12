@@ -1,5 +1,7 @@
 import { Dashboard, widgetTypes } from "./js/Dashboard.js";
 import { el } from "./js/UIComponent.js";
+import { Sakura } from "./js/Sakura.js";
+const sakura = new Sakura();
 const dashboard = new Dashboard(document.getElementById("dashboard"));
 const dialog = document.getElementById("widget-dialog");
 const add = document.getElementById("add-widget");
@@ -94,6 +96,7 @@ navigate();
 listen(window, "pagehide", () => {
   appEvents.abort();
   dashboard.destroy();
+  sakura.destroy();
 });
 window.addEventListener("pageshow", (event) => {
   if (event.persisted) location.reload();
