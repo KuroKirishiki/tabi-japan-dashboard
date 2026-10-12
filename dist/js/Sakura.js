@@ -32,7 +32,8 @@ export class Sakura {
     this.button = document.createElement("button");
     this.button.type = "button";
     this.button.className = "sakura-toggle";
-    document.body.append(this.layer, this.button);
+    document.querySelector("main").append(this.layer);
+    document.body.append(this.button);
     this.button.addEventListener(
       "click",
       () => {
